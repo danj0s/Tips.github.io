@@ -185,7 +185,6 @@ window.addEventListener("DOMContentLoaded", () => {
           const subtitle = data.description.replace(/від:/gi, "");
           const transformAmount = data.amount / 100;
           (0,_helpers_showAlert__WEBPACK_IMPORTED_MODULE_2__["default"])(transformAmount, subtitle);
-          console.log(data, "data");
         });
       }
     });

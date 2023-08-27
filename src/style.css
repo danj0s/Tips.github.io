@@ -8,10 +8,12 @@ body {
   overflow: hidden;
 }
 .main {
+  margin: 50px;
+
   position: relative;
   max-width: 512px;
 
-  /* display: flex; */
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
@@ -77,8 +79,7 @@ body {
   height: 100%;
 }
 
-/* .linear-horizontal-progress-widget  */
-.progress {
+.linear-horizontal-progress-widget .progress {
   height: 100%;
   --progress: 0%;
   width: var(--progress);
@@ -312,8 +313,7 @@ body {
 .widget.qr-with-progress-widget {
   border-radius: 16px;
   width: 450px;
-  /* height: 250px; */
-  height: 150px;
+  height: 155px;
   display: flex;
   position: relative;
 }
