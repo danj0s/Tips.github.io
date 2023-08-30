@@ -11,7 +11,6 @@ async function getJarInfo() {
   }).then((data) => {
     jarInfo = data[0];
   });
-  console.log(jarInfo, "jar");
   return jarInfo;
 }
 
