@@ -1,6 +1,6 @@
 "use strict";
 
-import { FETCHURL, GETRESOURCE, GETURL } from "./consts";
+import { FETCHURL, GETRESOURCE } from "./consts";
 import getJarInfo from "./helpers/getJarInfo";
 import ShowAlert from "./helpers/showAlert";
 
