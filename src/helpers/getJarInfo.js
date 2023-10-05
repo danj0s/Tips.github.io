@@ -3,7 +3,7 @@ import { FETCHURL, GETRESOURCE } from "../consts";
 async function getJarInfo() {
   let jarInfo;
   const to = Date.now();
-  const from = to - 100000000;
+  const from = to - 1000000000;
   await GETRESOURCE(`${FETCHURL.jarInfo}/${from}/${to}`, {
     method: "GET",
     headers: { "X-Token": "uyJhOlB9yDbyqbzhKq27AV2mmXcDzyEGLXF18GCJb76U" },
