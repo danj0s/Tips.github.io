@@ -17,6 +17,7 @@ const FETCHURL = {
   jar: "https://api.monobank.ua/bank/jar/5SCmE79vAMH8eYSgTLn4QQXvsHyRiEbh",
   jarInfo:
     "https://api.monobank.ua/personal/statement/j1j080oczHfu1RkWx880zSfmP4_irnc",
+  personalInfo: "https://api.monobank.ua/personal/client-info",
 };
 
 const GETRESOURCE = async (url, options) => {
@@ -47,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 async function getJarInfo() {
   let jarInfo;
   const to = Date.now();
-  const from = to - 100000000;
+  const from = to - 1000000000;
   await (0,_consts__WEBPACK_IMPORTED_MODULE_0__.GETRESOURCE)(`${_consts__WEBPACK_IMPORTED_MODULE_0__.FETCHURL.jarInfo}/${from}/${to}`, {
     method: "GET",
     headers: { "X-Token": "uyJhOlB9yDbyqbzhKq27AV2mmXcDzyEGLXF18GCJb76U" },
@@ -184,10 +185,19 @@ window.addEventListener("DOMContentLoaded", () => {
           const subtitle = data.description.replace(/від:/gi, "");
           const transformAmount = data.amount / 100;
           (0,_helpers_showAlert__WEBPACK_IMPORTED_MODULE_2__["default"])(transformAmount, subtitle);
+          console.log(data, "data");
         });
       }
     });
   }, 2000);
+  // GETRESOURCE(FETCHURL.personalInfo, {
+  //   method: "GET",
+  //   headers: { "X-Token": "uyJhOlB9yDbyqbzhKq27AV2mmXcDzyEGLXF18GCJb76U" },
+  //   mode: "cors",
+  // }).then((data) => {
+  //   console.log(data, "persInfo");
+  //   GETRESOURCE(`${FETCHURL.personalInfo}/${data.jars[0].sendId}`);
+  // });
 });
 
 })();
