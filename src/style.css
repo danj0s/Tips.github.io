@@ -8,12 +8,8 @@ body {
   overflow: hidden;
 }
 .main {
-  margin: 50px;
-
   position: relative;
   max-width: 512px;
-
-  display: flex;
   align-items: center;
   flex-direction: column;
 }
